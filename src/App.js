@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import ItemList from './components/ItemList';
+import { Container, Button, ButtonGroup } from '@mui/material';
 
-function App() {
+const App = () => {
+  const [apiType, setApiType] = useState('weather');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <ButtonGroup variant="contained" color="primary">
+        <Button onClick={() => setApiType('weather')}>Weather</Button>
+        <Button onClick={() => setApiType('jsonPlaceholder')}>Posts</Button>
+        <Button onClick={() => setApiType('dogAPI')}>Dog Images</Button>
+      </ButtonGroup>
+      <ItemList apiType={apiType} />
+    </Container>
   );
-}
+};
 
 export default App;
