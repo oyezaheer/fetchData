@@ -28,7 +28,7 @@ export const apis = {
   weather: {
     endpoint: 'https://api.openweathermap.org/data/2.5/weather',
     queryParams: { appid: API_KEY, units: 'metric' },
-    cities: ['London', 'New York', 'Tokyo', 'Delhi', 'Sydney'],
+    cities: ['London', 'New York', 'Tokyo', 'Delhi', 'Sydney', 'Singapore', 'Dubai', 'San Francisco', 'Barcelona', 'Madrid', 'Paris', 'Mumbai'],
   },
   jsonPlaceholder: {
     endpoint: 'https://jsonplaceholder.typicode.com/users',
